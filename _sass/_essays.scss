@@ -1,0 +1,91 @@
+
+.essay-header {
+  position:relative;
+  width: 100%;
+  display: block;
+  padding: 6.4rem 0;
+  background-color: #FFC107;
+  border-top-left-radius:6px;
+  border-top-right-radius:6px;
+
+  @include mq-personal { border-radius:0; }
+
+  .essay-title {
+    font-size: 3.2rem;
+    margin: 0;
+    padding: 0 8%;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 1px 0px rgba(0,0,0,.08);
+
+    @include mq-personal {
+      font-size: 2.1rem;
+      padding: 0 4%;
+      text-align: center;
+    }
+  }
+
+  .button-material {
+    position:absolute;
+    bottom: -2.2rem;
+    right: 2.2rem;
+  }
+}
+
+.essay-body {
+  padding: 4rem 8%;
+
+  @include mq-personal {
+    font-size: 1.5rem;
+    padding: 2.1rem 4%;
+  }
+
+  p {
+    @include mq-personal { font-size: 1.5rem; }
+  }
+}
+
+.essay-body {
+  h1 { font-size: 4.6rem; text-align:center; }
+  h2 { font-size: 3.2rem; margin-bottom: 2em; }
+  h3 { font-size: 2.5rem; margin-top:3em; }
+  h4 { font-size: $font_copy_size; margin-top:3em; }
+  img {
+    position:relative;
+    width: 120%;
+    left:-10%;
+  }
+}
+
+.essay-body h6:first-of-type {
+  margin-top: 6.4rem;
+}
+
+.essay-footer-action {
+  display: block;
+  width:100%;
+  max-width: 20em;
+  box-sizing: border-box;
+  padding:1em 0;
+  margin:2.1rem auto;
+  color:white;
+  text-align: center;
+  text-decoration: none;
+  background-color:$color_primary_link;
+  border:1px solid rgba(0,0,0,.05);
+  border-radius:6px;
+  font-family: $font_family_secondary;
+  font-size:1.9rem;
+  @include transition;
+
+  &:hover {
+    color:white;
+    background-color: darken($color_primary_link, 10%);
+    text-decoration: underline;
+    @include transition;
+  }
+
+  @include mq-personal {
+    width:92%;
+    margin:6.4rem auto;
+  }
+}

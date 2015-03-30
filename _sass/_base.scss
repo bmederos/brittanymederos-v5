@@ -1,0 +1,303 @@
+// ===========================
+// Table of Contents
+//
+// 1.0 Base HTML elements
+// 2.0 Utilities
+// 3.0 Layouts
+//
+// ===========================
+
+
+// ===========================
+// 1.0 Base HTML elements
+// ===========================
+
+html, body {
+  background-color: #FCFCFA;
+  color:$color_primary_copy;
+  font-family: $font_family_primary;
+  line-height:1.58;
+  font-size: 62.5%;
+}
+
+body {
+  // For Flexbox sticky footer
+  // http://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-size:1.5rem;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $font_family_secondary;
+  color:$color_primary_copy;
+  @include font-smoothing;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3.2rem;
+  margin: 1em auto 1.5em;
+  @include mq-personal { font-size:2.8rem; }
+}
+
+p {
+  font-size:$font_copy_size;
+  margin-bottom: 1.5em;
+  @include font-smoothing;
+}
+
+a {
+  color: lighten($color_primary_link, 10%);
+  &:hover{ color: $color_primary_link; }
+  &.danger{ color: #f45875; }
+}
+
+strong { font-weight:700; }
+b { font-weight:600; }
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+ul, ol {
+  font-size:$font_copy_size;
+  @include font-smoothing;
+  @include mq-personal { font-size:1.8rem; }
+
+  li { margin-bottom:1em; }
+}
+
+ul.inline {
+  margin: 0;
+  li { display: inline-block; }
+}
+
+
+dt, dd { line-height: 1.4; }
+dt { font-weight:600; margin-bottom:.5em; }
+dd { margin-bottom:1.5em; }
+
+blockquote {
+  padding: 0 0 0 1em;
+  margin:0 0 0 1em;
+  border-left:4px solid transparentize($color_primary_link, .9);
+  overflow: hidden;
+
+  @include mq-personal { margin-left: 0; }
+
+  p {
+    font-size:1.8rem;
+    line-height: 1.45;
+    @include mq-personal { font-size: 1.8rem; }
+  }
+}
+
+hr {
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: none;
+  margin: 8rem auto;
+}
+
+h6 {
+  display: block;
+  padding: 1em;
+  background-color: rgb(226, 242, 255);
+  font-weight: 500;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin:.5em auto;
+
+  &:before {
+    display: block;
+    content: "Author Notes";
+    padding-bottom:.5em;
+    font-weight:600;
+    font-size:1.3rem;
+    font-family: "Helvetica", sans-serif;
+    text-transform: uppercase;
+    color: rgb(137, 159, 178);
+  }
+}
+
+::selection      { background: rgba(255, 193, 7, .2); }
+::-moz-selection { background: rgba(255, 193, 7, .2); }
+
+
+// ===========================
+// 2.0 Utilities
+// ===========================
+
+.list {
+  margin:1em 0;
+  padding:0;
+  list-style: none;
+}
+
+.center { text-align: center; }
+.hidden { display: none !important; }
+.border-box-sizing { box-sizing: border-box; }
+
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Micro clearfix hack, (http://nicolasgallagher.com/micro-clearfix-hack/) */
+.group, .clearfix {
+  *zoom: 1; /* For IE6/7 only */
+  &:before { content: " "; display: table; }
+  &:after  { content: " "; display: table; clear: both; }
+}
+
+// ===========================
+// 3.0 Layout
+// ===========================
+
+
+
+.wrap {
+  position: relative;
+  width:96%;
+  max-width:800px;
+  margin: 0 auto;
+}
+
+.column {
+  box-sizing: border-box;
+  margin: 0 auto;
+  float: left;
+  display: block;
+  text-align: left;
+  padding:0 1em;
+
+  h4 { font-size:1.5rem; margin-bottom:0; }
+  li { margin-bottom:0; }
+  li a { font-size: 1.5rem; display:block; padding:.5em 0; }
+}
+
+.third-col {
+  width: 33%;
+  @include mq-personal { width:92%; }
+}
+
+.page {
+  width:100%;
+  max-width:800px;
+  box-sizing:border-box;
+  margin:2rem auto;
+  background-color: white;
+  border-radius:6px;
+  border:1px solid rgba(0,0,0,.05);
+  overflow: hidden;
+
+  @include mq-personal {
+    width:100%;
+    margin:0 auto;
+    border:none;
+    border-radius:0;
+  }
+}
+
+.site-footer {  
+  margin: 6.4rem auto 0;
+  width:100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding:4.8rem 0 ;
+
+  @include mq-personal { margin-top:0; }
+  
+  ol {
+    list-style: none;
+    padding: 0 .5em;
+    margin: 0 0 2em;
+  }
+
+  ol li a.active {
+    background-color: $color_primary_link;
+    color:white;
+    font-family: $font_family_secondary;
+    font-weight:600;
+    text-decoration: none;
+    border-radius:4px;
+    padding:.5em 1em;
+    margin:.5em auto;
+    line-height: 1;
+    width:100%;
+    position:relative;
+    left:-5%;
+  }
+}
+
+
+// ===========================
+// 4.0 Buttons
+// ===========================
+
+.button {
+  display: inline-block;
+  position:relative;
+  padding:.75em 1.5em;
+  margin:1.5em 0;
+  font-family: $font_family_secondary;
+  background-color: $color_primary_link;
+  color:white;
+  border:1px solid rgba(0,0,0,.05);
+  border-radius:2px;
+  text-decoration: none;
+  @include transition;
+
+  &:hover {
+    color:white;
+    text-decoration: underline;
+    border-color: rgba(0,0,0,.2);
+    background-color: lighten($color_primary_link, 8%);
+    @include transition;
+  }
+}
+
+.button-secondary {
+  color:$color_primary_link;
+  background-color: transparent;
+  border-color: transparentize($color_primary_link, .8);
+  &:hover {
+    background-color: $color_primary_link;
+    color:white;
+  }
+}
+
+.button-material {
+  width: 54px;
+  height: 54px;
+  border-radius:50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,.24);
+  padding: 0;
+  margin:0;
+
+  &:hover {
+    box-shadow: 0 3px 6px rgba(0,0,0,.5);
+    transition: all $material-curve 0.22s;
+  }
+}
+
+.button-action { background-color: $color_primary_link; }
+
+.button-menu {
+  background-image: url("//material-design.storage.googleapis.com/images/hamburger.svg");
+  background-size: 24px 24px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;  
+  text-indent: -9999px;
+  z-index: 2;
+}
+
