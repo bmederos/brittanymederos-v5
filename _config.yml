@@ -1,10 +1,9 @@
 # Site settings
-title: "Crafting Your Design Portfolio: A Weekend Guide"
-email: bm@enchant.co
+title: "Hotel Challenge"
+email: "bm@enchant.co"
 description: ""
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://portfolio.enchant.co" # the base hostname & protocol for your site
-twitter_username: letsenchant
+url: "http://hotel.enchant.co" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown

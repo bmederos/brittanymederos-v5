@@ -3,7 +3,13 @@
   {% include head.html %}
   <body>
     {{ content }}
-  
-    {% include footer.html %}
+
+    <script type="text/javascript">
+      $(document).on('click', '.js-card', function(e) {
+        var link;
+        link = $(this).find("a").first().attr('href');
+        return window.location = link;
+      });
+    </script>
   </body>
 </html>

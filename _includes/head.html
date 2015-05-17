@@ -1,5 +1,12 @@
 <head>
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>
+    Brittany Mederos ⤬ 
+    {% if page.title %}
+      {{ page.title }}
+    {% else %}
+      User Experience Researcher and Designer &middot; Singer &amp; Songwriter
+    {% endif %}
+  </title>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,10 +19,8 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
   <!-- TypeKit -->
-  <script src="//use.typekit.net/nfp1ywb.js"></script>
+  <script src="//use.typekit.net/odk7dao.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
 
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-  {% include segment_scripts.html %}
 </head>
