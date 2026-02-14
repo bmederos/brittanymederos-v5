@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Brittany Mederos - Preview</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Base */
+    html { font-size: 62.5%; }
+    body {
+      margin: 0;
+      font-family: -apple-system, "Helvetica Neue", helvetica, sans-serif;
+      font-size: 1.8rem;
+      line-height: 1.4em;
+      color: #595050;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      color: #595050;
+      line-height: 1.15em;
+      margin: 0 0 0.3em 0;
+      font-family: -apple-system, "Helvetica Neue", helvetica, sans-serif;
+    }
+    h1, h2 { font-size: 3rem; margin-bottom: 1.8em; color: #333; }
+    h3 { font-size: 2.1rem; font-weight: 500; margin-bottom: 1em; }
+    h4 { font-size: 1.4rem; }
+    a { color: #E91E63; transition: color ease 0.3s; text-decoration: none; }
+    a:hover { color: #826EE6; text-decoration: underline; }
+    p, ul, ol { margin: 0 0 1.6em 0; line-height: 1.5; font-weight: 300; }
+    strong { font-weight: bold; }
+    .group:before, .group:after { content: " "; display: table; }
+    .group:after { clear: both; }
+
+    /* Layout */
+    .wrap { width: 92%; max-width: 800px; margin: 0 auto; position: relative; }
+    .content h1, .content h2, .content h3, .content p, .content ul, .content ol { max-width: 600px; }
+
+    /* About */
+    .about { margin-top: 8rem; }
+    .about h1 { font-size: 4.8rem; font-weight: 300; margin-bottom: 0.25em; }
+    .subheader { font-size: 2.4rem; font-weight: 300; }
+    section { padding-bottom: 4em; margin-bottom: 4em; border-bottom: 2px solid #EFEFEF; }
+
+    /* Skill Tags */
+    .skill-tags { font-size: 1.4rem; font-weight: 500; color: #826EE6; letter-spacing: 0.02em; }
+
+    /* Cards */
+    .card-case-study {
+      position: relative; max-width: 600px; width: 48%; float: left;
+      box-sizing: border-box; border: 1px solid #E0E0E0; border-radius: 6px;
+      margin: 1em 1%; transition: all 0.3s; cursor: pointer; overflow: hidden;
+    }
+    .card-case-study:hover { box-shadow: 0 2px 5px rgba(0,0,0,.1); }
+    .card-case-study p { font-size: 1.6rem; margin-bottom: 0; }
+    .card-case-study .card-content { position: relative; padding: 1em; }
+    .card-case-study .card-tags { margin-top: 2.1rem; font-size: 1.3rem; color: #bbb; }
+    .card-no-hero .card-content { padding: 1.5em; }
+    .card-label {
+      display: inline-block; font-size: 1.2rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em; color: #826EE6; margin-bottom: 0.5em;
+    }
+
+    /* Case study heroes (won't load images in preview but shows structure) */
+    .case-study-hero { position: relative; height: 240px; width: 100%; margin: 0 0 1em; background: #f0f0f0; background-size: cover; background-repeat: no-repeat; background-position: center; }
+    .button { display: none; }
+
+    /* Publications & Patents */
+    .publications-patents h4 { font-size: 2rem; font-weight: 500; margin-top: 2em; margin-bottom: 0.5em; color: #49484D; }
+    .publications-patents h4:first-of-type { margin-top: 0; }
+    .pub-list { list-style: none; padding: 0; max-width: 600px; }
+    .pub-list li { padding: 1em 0; border-bottom: 1px solid #EFEFEF; }
+    .pub-list li:last-child { border-bottom: none; }
+    .pub-list li a { font-weight: 500; }
+    .patent-meta { display: block; font-size: 1.3rem; color: #999; margin-top: 0.3em; }
+    .patent-meta a { font-weight: 400; }
+    .patent-desc { display: block; font-size: 1.4rem; color: #595050; margin-top: 0.4em; line-height: 1.4; }
+
+    /* Responsive */
+    @media (max-width: 30em) {
+      .about { margin-top: 4rem; }
+      .about h1 { font-weight: 500; font-size: 2.8rem; text-align: center; }
+      .about .subheader { text-align: center; font-size: 2.1rem; line-height: 1.2; }
+      .card-case-study { float: none; margin: 2em auto; width: 92%; }
+    }
+  </style>
+</head>
+<body>
+  <main class="content wrap" role="main">
+    <section class="about">
+      <h1>Brittany Mederos</h1>
+      <p class="subheader">Principal Design & Research Manager at Microsoft</p>
+      <p>I lead design strategy and execution for generative AI-powered experiences. With expertise in UX, product strategy, and cross-functional collaboration, I specialize in creating intuitive, AI-driven tools that empower creativity at scale.</p>
+      <p>Over my career, I have contributed to launching industry-leading design systems, shaping AI-integrated workflows, and driving innovation in both consumer and enterprise spaces. I'm passionate about fostering strong teams, championing mentorship, and pushing the boundaries of what's possible with AI.</p>
+      <p class="skill-tags">Generative AI Experiences &middot; Design Leadership &middot; Product Strategy &middot; UX Research &middot; Cross-Functional Collaboration &middot; Design Systems</p>
+    </section>
+
+    <section class="case-studies group">
+      <p class="subheader"><b>Featured work</b> from a decade at Microsoft.</p>
+      <p>From pitching new products to shipping AI-powered tools used by millions, here's a look at some of the work I'm most proud of:</p>
+
+      <div class="cards">
+        <div class="group">
+          <div class="card-case-study card-no-hero">
+            <div class="card-content">
+              <span class="card-label">Microsoft</span>
+              <h3>AI-Powered Learning Experience</h3>
+              <p>Leading design and research for a 0-to-1 product team launching a transformative learning experience powered by AI. Building a high-performing, inclusive team of design and research excellence within a product org undergoing a cultural shift from service-oriented to product-driven.</p>
+              <p class="card-tags">design leadership - 0-to-1 product - generative AI - UX research - team building</p>
+            </div>
+          </div>
+          <div class="card-case-study card-no-hero">
+            <div class="card-content">
+              <span class="card-label">Microsoft</span>
+              <h3>Microsoft Designer: GenAI Design Tool</h3>
+              <p>Helped pitch to Microsoft SLT and Satya Nadella, securing funding for a new M365 Suite app to compete with Canva and the Creator Economy. Designed and shipped the Editor, a core AI-powered tool for content creation. Defined GenAI design paradigms, ensuring AI-driven experiences were intuitive, ethical, and user-friendly.</p>
+              <p class="card-tags">generative AI - product vision - design systems - AI-powered creativity - enterprise &amp; consumer</p>
+            </div>
+          </div>
+        </div>
+        <div class="group">
+          <div class="card-case-study card-no-hero">
+            <div class="card-content">
+              <span class="card-label">Microsoft</span>
+              <h3>Designer x Copilot Integration</h3>
+              <p>Led the pivot of Designer capabilities into Copilot, integrating the Editor canvas into Copilot chat for AI-driven image generation and editing. Successfully launched the first integration of the Editor canvas in Copilot. Played a critical role in Microsoft's first Super Bowl marketing campaign in years, showcasing this as a flagship feature.</p>
+              <p class="card-tags">copilot - AI integration - generative AI - image editing - enterprise design</p>
+            </div>
+          </div>
+          <div class="card-case-study card-no-hero">
+            <div class="card-content">
+              <span class="card-label">Microsoft</span>
+              <h3>PowerPoint: AI Presentation Tools</h3>
+              <p>Managed the PowerPoint and Graphics design team, driving the creation of compelling storytelling tools. Spearheaded the integration of PowerPoint into Microsoft Teams for real-time collaboration, and partnered on AI-powered presentation enhancements including auto-design and speaker coaching.</p>
+              <p class="card-tags">AI design - speaker coaching - remote presenting - Microsoft Teams integration</p>
+            </div>
+          </div>
+        </div>
+        <div class="group">
+          <div class="card-case-study card-no-hero">
+            <div class="card-content">
+              <span class="card-label">Microsoft</span>
+              <h3>Office 365: Outlook &amp; StaffHub</h3>
+              <p>Successfully designed and launched Outlook People for the web, Outlook Customer Manager, and Microsoft StaffHub&mdash;a customer-centered approach to building tools for firstline workers in Office 365.</p>
+              <p class="card-tags">product design - enterprise - web applications - customer research - Office 365</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="subheader" style="margin-top:4em;"><b>Earlier work</b></p>
+
+      <div class="cards">
+        <div class="group">
+          <div class="card-case-study">
+            <div class="case-study-hero" style="background:#e8e0f0; display:flex; align-items:center; justify-content:center; color:#826EE6; font-size:1.4rem; font-weight:500;">Elementum Transport</div>
+            <div class="card-content">
+              <h3>Elementum: Transport App</h3>
+              <p>Real time logistics visibility that helps Logistic managers be more proactive and spend less time tracking down spreadsheets.</p>
+              <p class="card-tags">interaction design - user testing - prototyping - research - web - mobile - enterprise</p>
+            </div>
+          </div>
+          <div class="card-case-study">
+            <div class="case-study-hero" style="background:#e0e8f0; display:flex; align-items:center; justify-content:center; color:#826EE6; font-size:1.4rem; font-weight:500;">Situation Room</div>
+            <div class="card-content">
+              <h3>Elementum: Situation Room</h3>
+              <p>Designing a control room to inspire collaboration between operational teams.</p>
+              <p class="card-tags">interaction design - prototyping - large screen display - enterprise - data visualizations</p>
+            </div>
+          </div>
+        </div>
+        <div class="group">
+          <div class="card-case-study">
+            <div class="case-study-hero" style="background:#e0f0e8; display:flex; align-items:center; justify-content:center; color:#826EE6; font-size:1.4rem; font-weight:500;">Paying for College</div>
+            <div class="card-content">
+              <h3>CFPB: Paying For College</h3>
+              <p>Helping Students make smarter financial decisions about college.</p>
+              <p class="card-tags">interaction design - user testing - prototyping - user research - web - consumer</p>
+            </div>
+          </div>
+          <div class="card-case-study">
+            <div class="case-study-hero" style="background:#f0e8e0; display:flex; align-items:center; justify-content:center; color:#826EE6; font-size:1.4rem; font-weight:500;">Strategic Plan</div>
+            <div class="card-content">
+              <h3>CFPB: Yearly Strategic Plan</h3>
+              <p>A new type of government report&mdash;a living document, an online interactive report&mdash;for the CFPB to send to Congress.</p>
+              <p class="card-tags">interaction design - visual design - web - print - template design and documentation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="publications-patents">
+      <p class="subheader"><b>Publications &amp; Patents</b></p>
+
+      <h4>Publications</h4>
+      <ul class="pub-list">
+        <li><a href="#">Crafting Your UX Portfolio &mdash; A Weekend Guide to Getting It Done</a></li>
+        <li><a href="#">Microsoft StaffHub: Customer-centered design driven</a></li>
+        <li><a href="#">Top prototyping tools for interaction designers</a></li>
+      </ul>
+
+      <h4>Patents</h4>
+      <ul class="pub-list">
+        <li>
+          <strong>Techniques for Facilitating Online Presentation Sessions</strong><br>
+          <span class="patent-meta">Microsoft &middot; Co-inventors: K. Seleskerov, A. Srivastava, D. Johnson, P. Sinha, G. Wu</span><br>
+          <span class="patent-desc">AI-driven system for analyzing presenter and audience media streams using machine learning models to generate real-time feedback and reaction analysis during live presentations.</span>
+        </li>
+        <li>
+          <strong>Method and System for Monitoring Shipments in a Supply and/or Logistics Chain</strong><br>
+          <span class="patent-meta">Elementum SCM &middot; US20160217399A1</span><br>
+          <span class="patent-desc">System for tracking shipments using transport graph data structures, detecting delays, and identifying affected nodes in the supply chain.</span>
+        </li>
+      </ul>
+      <p style="font-size:1.4rem; color:#999;">View full patent listing on <a href="#">Justia Patents</a></p>
+    </section>
+
+    <section class="contact">
+      <p class="subheader">Let's <b>connect</b>.</p>
+      <p>Find me on <a href="#">LinkedIn</a>, or catch glimpses of life outside work <a href="#">on Instagram</a>.</p>
+      <p>If <b>email</b> is your thing, <a href="mailto:bm@enchant.co">send me a message</a>.</p>
+    </section>
+  </main>
+</body>
+</html>
