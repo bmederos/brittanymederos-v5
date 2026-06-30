@@ -1,9 +1,9 @@
 # Site settings
-title: "Hotel Challenge"
+title: "Brittany Mederos"
 email: "bm@enchant.co"
-description: ""
+description: "Principal Design & Research Manager at Microsoft — Leading AI-driven design strategies and generative AI experiences."
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://hotel.enchant.co" # the base hostname & protocol for your site
+url: "https://www.brittanymederos.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
